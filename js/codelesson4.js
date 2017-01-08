@@ -56,3 +56,32 @@ for(var i = vacationSpots.length -1; i >= 0; i--){
  // Except we printed 'I would love to visit undefined'. Why did this happen?
 // It's because the length of vacationSpots is 3 and vacationSpots has items in its array at positions 0, 1, and 2.
 // Since JavaScript starts from 0, make the start condition the length of the vacationSpots array, minus 1.
+
+
+var myPlaces = ["Alaska","India","Hawaii"];
+var friendPlaces = ["Japan","Alaska","Italy"];
+
+for(var i = 0; i < myPlaces.length; i++){
+  for(var j = 0; j < friendPlaces.length; j++){
+    if(myPlaces[i] === friendPlaces[j]){
+       console.log("match: " + myPlaces[i]);
+       }
+  }
+}
+// The big idea is that we can run a for loop inside another for loop to compare the items in two arrays.
+// Every time the outter for loop runs once,the inner for loop will run completely.
+// With two for loops,we can check to see if any of the your vacation spots match your friend's spots.
+
+
+var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+var currentCard = 'Heart';
+
+while (currentCard !== 'Spade') {
+  console.log(currentCard);
+
+  var randomNumber = Math.floor(Math.random() * 4);
+
+  currentCard = cards[randomNumber];
+}
+
+console.log('Found a Spade!');
