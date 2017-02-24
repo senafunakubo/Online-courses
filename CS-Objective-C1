@@ -1,0 +1,39 @@
+he bit between the parentheses is the way we represent a string of characters in Objective-C.
+NSLog(@"Hello,Mr.Higgie.");
+
+For string values, the type of variable you have to choose is NSString *.
+NSString *firstName = @"Sena";
+
+just refer to the name of the variable.
+NSLog(firstName);
+
+You can also pass it a string that contains placeholders,
+ and NSLog will dutifully replace each placeholder with the extra values you give it.
+NSLog(@"Hello there, %@.", firstName);
+The string you’re logging is called a formatted string.
+
+NSString *lastName = @"Funa";
+NSLog(@"%@ %@", firstName, lastName);
+
+Wondering where the word "objects" is coming from? Remember that "variable" just refers to the box.
+ The "object" is the thing stored inside the box. So firstName is a variable, while @"Hello,Mr.Higgie." is an object. Sometimes we'll just use "object" as a shorthand when referring to a variable holding an object.
+
+NSNumber *age = @25;
+NSLog(@"%@ is %@ years old", firstName, age);
+
+For storing data to an array
+NSArray *apps = @[@"AngryFowl", @"Lettertouch", @"Tweetrobot"];
+To call an object from the array
+ NSLog(@"%@", apps[1]);
+
+Instead of changing the existing apps object, we can assign an entirely new array to apps, just like how we could replace the contents of a box with new contents.
+ apps = @[@"AngryFowl", @"Lettertouch", @"Tweetrobot", @"Instacanvas"];
+
+Objective-C has an object that’s perfect for this type of data: NSDictionary.
+ With an NSDictionary, we can associate a key (the app name), with a value (the app rating).
+ For example, we can create a NSDictionary with a single key and value like this:
+ NSDictionary *appRatings = @{@"AngryFowl": @3, @"Lettertouch": @5};
+
+Accessing the values in a dictionary works exactly like it does with an array, except instead of using a number,
+ you use the key. 
+NSLog(@"Lettertouch has a rating of %@.", appRatings[@"Lettertouch"]);
