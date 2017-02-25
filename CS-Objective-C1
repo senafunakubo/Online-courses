@@ -22,7 +22,8 @@ NSNumber *age = @25;
 NSLog(@"%@ is %@ years old", firstName, age);
 
 For storing data to an array
-NSArray *apps = @[@"AngryFowl", @"Lettertouch", @"Tweetrobot"];
+ NSArray *apps = @[@"AngryFowl", @"Lettertouch", @"Tweetrobot"];
+
 To call an object from the array
  NSLog(@"%@", apps[1]);
 
@@ -35,5 +36,5 @@ Objective-C has an object that’s perfect for this type of data: NSDictionary.
  NSDictionary *appRatings = @{@"AngryFowl": @3, @"Lettertouch": @5};
 
 Accessing the values in a dictionary works exactly like it does with an array, except instead of using a number,
- you use the key. 
+ you use the key.
 NSLog(@"Lettertouch has a rating of %@.", appRatings[@"Lettertouch"]);

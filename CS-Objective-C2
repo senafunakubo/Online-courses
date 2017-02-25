@@ -1,0 +1,7 @@
+To send a message, you need at least two things - an object and a message name:
+
+[objectName messageName];
+
+The object name goes on the left, followed by a space and then the message name,
+ and then the whole thing is wrapped inside square-brackets.
+[tryobjc completeThisChallenge];
